@@ -14,6 +14,9 @@ import React from "react";
          <th>GeographyID</th>
          <th>County</th>
          <th>City</th>
+         <th>State</th>
+         <th>Country</th>
+         <th>ZipCode</th>
        </tr>
      </thead>
      <tbody>
@@ -22,6 +25,9 @@ import React from "react";
          <td>{item.GeographyID}</td>
          <td>{item.County}</td>
          <td>{item.City}</td>
+         <td>{item.State}</td>
+         <td>{item.Country}</td>
+         <td>{item.ZipCode}</td>
        </tr>
        ))}
        </tbody>
