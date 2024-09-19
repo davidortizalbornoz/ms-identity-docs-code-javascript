@@ -16,17 +16,16 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 // Required for MSAL
 import { IPublicClientApplication, PublicClientApplication, InteractionType, BrowserCacheLocation, LogLevel } from '@azure/msal-browser';
 import { MsalGuard, MsalInterceptor, MsalBroadcastService, MsalInterceptorConfiguration, MsalModule, MsalService, MSAL_GUARD_CONFIG, MSAL_INSTANCE, MSAL_INTERCEPTOR_CONFIG, MsalGuardConfiguration, MsalRedirectComponent } from '@azure/msal-angular';
+import { GraphQLModule } from './graphQL/graphql.module';
+import { GeographiesComponent } from './graphQL/geographies.component';
 
 const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
 
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
-      // 'Application (client) ID' of app registration in the Microsoft Entra admin center - this value is a GUID
-      clientId: "Enter_the_Application_Id_Here",
-      // Full directory URL, in the form of https://login.microsoftonline.com/<tenant>
-      authority: "https://login.microsoftonline.com/Enter_the_Tenant_Info_Here",
-      // Must be the same redirectUri as what was provided in your app registration.
+      clientId: "7d976ef6-df1b-4223-baa6-2265b0a299f7",
+      authority: "https://login.microsoftonline.com/2606531e-13eb-4255-9902-be0b722ec2ca",
       redirectUri: "http://localhost:4200",
     },
     cache: {
@@ -62,13 +61,15 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
   declarations: [
     AppComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    GeographiesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MsalModule
+    MsalModule,
+    GraphQLModule
   ],
   providers: [
     {

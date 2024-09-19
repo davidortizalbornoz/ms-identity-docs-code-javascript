@@ -7,6 +7,7 @@
 </a>
 	<a class="profileButton">
 		<a [routerLink]="['profile']" class="btn btn-secondary" *ngIf="loginDisplay">View Profile</a> 
+		<a [routerLink]="['app-geographies']" class="btn btn-secondary" *ngIf="loginDisplay">Call API graphQL</a> 
 	</a>
 <div class="container">
 	<router-outlet></router-outlet>

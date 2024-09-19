@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 
 // MsalGuard is required to protect routes and require authentication before accessing protected routes
 import { MsalGuard } from '@azure/msal-angular';
+import { GeographiesComponent } from './graphQL/geographies.component';
 
 // Define the possible routes
 // Specify MsalGuard on routes to be protected
@@ -24,6 +25,10 @@ const routes: Routes = [
       MsalGuard
     ]
   },
+  {
+    path: 'app-geographies',
+    component: GeographiesComponent
+  },  
   {
     path: '**',
     component: HomeComponent

@@ -14,7 +14,7 @@ import { filter, takeUntil } from 'rxjs/operators';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'Angular 12 - MSAL Example';
+  title = 'Angular 18 - MSAL Hoob';
   loginDisplay = false;
   tokenExpiration: string = '';
   private readonly _destroying$ = new Subject<void>();
