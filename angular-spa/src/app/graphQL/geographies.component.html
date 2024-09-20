@@ -1,31 +1,32 @@
-<!--<button (click)="fetchGeographies()">Fetch Geographies</button>-->
-<ul *ngIf="geographies.length > 0">
-
-
-  <Table striped bordered hover responsive>
-    <thead>
-      <tr>
-        <th>GeographyID</th>
-        <th>County</th>
-        <th>City</th>
-        <th>State</th>
-        <th>Country</th>
-        <th>ZipCode</th>
-      </tr>
-    </thead>
-    <tbody>
-
-      <tr *ngFor="let geography of geographies">
-        <td>{{geography.GeographyID}}</td>
-        <td>{{geography.County}}</td>
-        <td>{{geography.City}}</td>
-        <td>{{geography.State}}</td>
-        <td>{{geography.Country}}</td>
-        <td>{{geography.ZipCode}}</td>
-      </tr>
-
+<div class="container my-5">
+  <div class="table-responsive" *ngIf="geographies.length > 0">
+    <table class="table table-striped table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>GeographyID</th>
+          <th>County</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Country</th>
+          <th>ZipCode</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let geography of geographies">
+          <td>{{ geography.GeographyID }}</td>
+          <td>{{ geography.County }}</td>
+          <td>{{ geography.City }}</td>
+          <td>{{ geography.State }}</td>
+          <td>{{ geography.Country }}</td>
+          <td>{{ geography.ZipCode }}</td>
+        </tr>
       </tbody>
-    </Table>
+    </table>
+  </div>
+  <!--
+  <div class="text-center" *ngIf="geographies.length === 0">
+    <p class="lead">No geographies found.</p>
+  </div>
+  -->
+</div>
 
-</ul>
-<p *ngIf="geographies.length === 0">No geographies found.</p>

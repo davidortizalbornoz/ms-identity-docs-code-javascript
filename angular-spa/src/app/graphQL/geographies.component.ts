@@ -14,7 +14,8 @@ interface Geography {
 
 @Component({
   selector: 'app-geographies',
-  templateUrl: './geographies.component.html'
+  templateUrl: './geographies.component.html',
+  styleUrls: ['./geographies_style.css']
 })
 export class GeographiesComponent implements OnInit, OnDestroy {
   geographies: Geography[] = [];
