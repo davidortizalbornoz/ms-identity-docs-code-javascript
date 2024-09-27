@@ -351,3 +351,4 @@ MigrationBackup/
 /angular-spa/.angular
 /angular-spa/dist
 .DS_Store
+/oauth-redirect-project/dist
